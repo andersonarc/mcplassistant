@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.github.andersonarc"
-version = "1.0"
+version = "2.1"
 
 repositories {
     mavenCentral()
@@ -24,7 +24,7 @@ tasks {
     register<Jar>("buildJar") {
         dependsOn(configurations.compileClasspath)
         manifest {
-            attributes(mapOf("Main-Class" to "MainKt"))
+            attributes(mapOf("Main-Class" to "com.github.andersonarc.mcprotocollib_assistant.MainKt"))
         }
         from(sourceSets.main.get().output)
         from(configurations.compileClasspath.get().filter { it.name.endsWith("jar") }.map { zipTree(it) })

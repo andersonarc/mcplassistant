@@ -1,2 +1,2 @@
-rootProject.name = "assistant"
+rootProject.name = "mcprotocollib_assistant"
 

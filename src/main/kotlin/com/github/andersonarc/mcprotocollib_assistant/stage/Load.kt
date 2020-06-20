@@ -6,6 +6,7 @@ import com.github.andersonarc.mcprotocollib_assistant.git.git
 import com.github.andersonarc.mcprotocollib_assistant.git.version
 import com.github.andersonarc.mcprotocollib_assistant.misc.Arguments
 import java.io.File
+import java.util.concurrent.Future
 import java.util.concurrent.TimeUnit
 
 fun load(arguments: Arguments) {
@@ -19,16 +20,16 @@ fun load(arguments: Arguments) {
     val executor = arguments.executor
 
     /**
-     * last version cloned from git and copied as source to other versions
+     * last version cloned from github and copied as source to other versions
      */
     val cloned = File(directory, "source")
     git(
-        File(directory),
+        cloned.parentFile,
         "clone",
         repository,
-        "source"
+        cloned.name
     )
-    println("cloned $repository from git to $cloned")
+    println("cloned $repository from github to $cloned")
     val latest = version(cloned)
     println("latest version $latest detected")
     val source = File(directory, latest)
@@ -45,8 +46,9 @@ fun load(arguments: Arguments) {
     /**
      * save each commit to separate folder
      */
+    val futures = ArrayList<Future<*>>()
     for (entry in filtered) {
-        executor.execute {
+        futures.add(executor.submit {
             println("loading " + entry.second)
             val current = File(directory, entry.second)
             if (current.exists()) current.deleteRecursively()
@@ -57,9 +59,9 @@ fun load(arguments: Arguments) {
                 "--hard",
                 entry.first
             )
-        }
+        })
     }
     println("awaiting for all tasks to finish")
-    executor.awaitTermination(10, TimeUnit.MINUTES)
+    futures.forEach { it.get(60, TimeUnit.SECONDS) }
     println("leaving load stage")
 }

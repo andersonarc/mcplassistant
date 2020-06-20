@@ -10,9 +10,13 @@ fun main(args: Array<String>) {
      println("mcprotocollib assistant started")
      val arguments = init(args)
 
-     load(arguments)
-     build(arguments)
+     if (arguments.mode.canLoad()) {
+          load(arguments)
+     }
+     if (arguments.mode.canBuild()) {
+          build(arguments)
+     }
 
-     println("leaving")
+     println("exit")
      exitProcess(0)
 }
