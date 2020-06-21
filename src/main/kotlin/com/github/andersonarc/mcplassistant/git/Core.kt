@@ -1,6 +1,6 @@
-package com.github.andersonarc.mcprotocollib_assistant.git
+package com.github.andersonarc.mcplassistant.git
 
-import com.github.andersonarc.mcprotocollib_assistant.misc.process
+import com.github.andersonarc.mcplassistant.misc.process
 import java.io.File
 import java.io.FileInputStream
 

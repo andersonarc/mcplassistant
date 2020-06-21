@@ -1,4 +1,4 @@
-package com.github.andersonarc.mcprotocollib_assistant.maven
+package com.github.andersonarc.mcplassistant.maven
 
 import java.io.File
 

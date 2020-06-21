@@ -1,8 +1,8 @@
-package com.github.andersonarc.mcprotocollib_assistant.stage
+package com.github.andersonarc.mcplassistant.stage
 
-import com.github.andersonarc.mcprotocollib_assistant.misc.Arguments
-import com.github.andersonarc.mcprotocollib_assistant.misc.Mode
-import com.github.andersonarc.mcprotocollib_assistant.misc.assert
+import com.github.andersonarc.mcplassistant.misc.Arguments
+import com.github.andersonarc.mcplassistant.misc.Mode
+import com.github.andersonarc.mcplassistant.misc.assert
 import java.io.File
 import java.util.concurrent.Executors
 import kotlin.system.exitProcess

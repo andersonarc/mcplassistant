@@ -1,7 +1,7 @@
-package com.github.andersonarc.mcprotocollib_assistant.stage
+package com.github.andersonarc.mcplassistant.stage
 
-import com.github.andersonarc.mcprotocollib_assistant.maven.compile
-import com.github.andersonarc.mcprotocollib_assistant.misc.Arguments
+import com.github.andersonarc.mcplassistant.maven.compile
+import com.github.andersonarc.mcplassistant.misc.Arguments
 import java.nio.file.Files
 import java.nio.file.Paths
 import java.util.concurrent.Future

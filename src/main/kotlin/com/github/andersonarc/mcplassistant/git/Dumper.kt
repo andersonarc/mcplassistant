@@ -1,9 +1,9 @@
-package com.github.andersonarc.mcprotocollib_assistant.git
+package com.github.andersonarc.mcplassistant.git
 
 import java.io.File
 
 fun commits(source: File): List<Pair<String, String>> {
-    com.github.andersonarc.mcprotocollib_assistant.misc.assert(
+    com.github.andersonarc.mcplassistant.misc.assert(
         source.exists(),
         "source directory \"$source\" must exist"
     )

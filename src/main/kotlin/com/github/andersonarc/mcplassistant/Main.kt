@@ -1,8 +1,8 @@
-package com.github.andersonarc.mcprotocollib_assistant
+package com.github.andersonarc.mcplassistant
 
-import com.github.andersonarc.mcprotocollib_assistant.stage.build
-import com.github.andersonarc.mcprotocollib_assistant.stage.init
-import com.github.andersonarc.mcprotocollib_assistant.stage.load
+import com.github.andersonarc.mcplassistant.stage.build
+import com.github.andersonarc.mcplassistant.stage.init
+import com.github.andersonarc.mcplassistant.stage.load
 import kotlin.system.exitProcess
 
 

@@ -24,7 +24,7 @@ tasks {
     register<Jar>("buildJar") {
         dependsOn(configurations.compileClasspath)
         manifest {
-            attributes(mapOf("Main-Class" to "com.github.andersonarc.mcprotocollib_assistant.MainKt"))
+            attributes(mapOf("Main-Class" to "com.github.andersonarc.mcplassistant.MainKt"))
         }
         from(sourceSets.main.get().output)
         from(configurations.compileClasspath.get().filter { it.name.endsWith("jar") }.map { zipTree(it) })

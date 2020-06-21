@@ -1,10 +1,10 @@
-package com.github.andersonarc.mcprotocollib_assistant.stage
+package com.github.andersonarc.mcplassistant.stage
 
-import com.github.andersonarc.mcprotocollib_assistant.git.commits
-import com.github.andersonarc.mcprotocollib_assistant.git.filter
-import com.github.andersonarc.mcprotocollib_assistant.git.git
-import com.github.andersonarc.mcprotocollib_assistant.git.version
-import com.github.andersonarc.mcprotocollib_assistant.misc.Arguments
+import com.github.andersonarc.mcplassistant.git.commits
+import com.github.andersonarc.mcplassistant.git.filter
+import com.github.andersonarc.mcplassistant.git.git
+import com.github.andersonarc.mcplassistant.git.version
+import com.github.andersonarc.mcplassistant.misc.Arguments
 import java.io.File
 import java.util.concurrent.Future
 import java.util.concurrent.TimeUnit

@@ -1,4 +1,4 @@
-package com.github.andersonarc.mcprotocollib_assistant.misc
+package com.github.andersonarc.mcplassistant.misc
 
 import java.io.File
 import java.util.concurrent.ExecutorService
