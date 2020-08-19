@@ -1,14 +1,14 @@
-# mcsloader
-assistant build system for loading different mcprotocollib versions
+# MCSLoader
+Build system for loading all MCProtocolLib versions.
 
-## purpose
+## Purpose
 
-mcsloader downloads all versions from mcprotocollib repository and compiles them to .jar files
-which are used by mcscore as protocol implementation
+MCSLoader downloads all versions from MCProtocolLib repository and compiles them to .jar files, 
+which are used by MCSCore as a MCProtocol implementation.
 
-## usage
+## Usage
 
-`java -jar mcsloader-2.4.jar **OUTPUT MCPROTOCOLLIB_REPOSITORY_URL**`
+`java -jar mcsloader-2.4.jar OUTPUT MCPROTOCOLLIB_REPOSITORY_URL`
 
-versions loaded from git repository **MCPROTOCOLLIB_REPOSITORY_URL**
-build output is saved into **OUTPUT** directory
+MCProtocolLib versions are loaded from Git repository **MCPROTOCOLLIB_REPOSITORY_URL**.
+Build output is saved into **OUTPUT** directory.
