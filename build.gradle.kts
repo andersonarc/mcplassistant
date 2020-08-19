@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.github.andersonarc"
-version = "2.1"
+version = "2.4"
 
 repositories {
     mavenCentral()
@@ -24,7 +24,7 @@ tasks {
     register<Jar>("buildJar") {
         dependsOn(configurations.compileClasspath)
         manifest {
-            attributes(mapOf("Main-Class" to "com.github.andersonarc.mcplassistant.MainKt"))
+            attributes(mapOf("Main-Class" to "com.github.andersonarc.mcsloader.MainKt"))
         }
         from(sourceSets.main.get().output)
         from(configurations.compileClasspath.get().filter { it.name.endsWith("jar") }.map { zipTree(it) })

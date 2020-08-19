@@ -1,4 +1,4 @@
-package com.github.andersonarc.mcplassistant.maven
+package com.github.andersonarc.mcsloader.maven
 
 import java.io.File
 

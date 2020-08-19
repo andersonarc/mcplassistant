@@ -1,6 +1,6 @@
-package com.github.andersonarc.mcplassistant.git
+package com.github.andersonarc.mcsloader.git
 
-import com.github.andersonarc.mcplassistant.misc.process
+import com.github.andersonarc.mcsloader.misc.process
 import java.io.File
 import java.io.FileInputStream
 

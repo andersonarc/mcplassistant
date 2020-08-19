@@ -1,9 +1,8 @@
-package com.github.andersonarc.mcplassistant.stage
+package com.github.andersonarc.mcsloader.stage
 
-import com.github.andersonarc.mcplassistant.misc.Arguments
-import com.github.andersonarc.mcplassistant.misc.Mode
-import com.github.andersonarc.mcplassistant.misc.assert
-import java.io.File
+import com.github.andersonarc.mcsloader.misc.Arguments
+import com.github.andersonarc.mcsloader.misc.Mode
+import com.github.andersonarc.mcsloader.misc.assert
 import java.util.concurrent.Executors
 import kotlin.system.exitProcess
 
@@ -11,7 +10,7 @@ fun init(args: Array<String>): Arguments {
     println("entering init stage")
     assert(
         args.size > 1,
-        "missing required arguments\nusage: ... working_directory git_repository [load|build|all] [threads_number]"
+        "missing required arguments\nusage: ... working_directory git_repository [load|refactor|build|all] [threads_number]"
     )
 
     /**
@@ -40,14 +39,6 @@ fun init(args: Array<String>): Arguments {
         threads.toIntOrNull() != null,
         "threads_number should be an integer")
     println("threads_number set to $threads")
-
-    /**
-     * clear working directory
-     */
-    val file = File(directory)
-    file.deleteRecursively()
-    file.mkdir()
-    println("working directory cleaned")
 
     val executor = Executors.newFixedThreadPool(threads.toInt())
     println("leaving init stage")

@@ -1,2 +1,2 @@
-rootProject.name = "mcplassistant"
+rootProject.name = "mcsloader"
 

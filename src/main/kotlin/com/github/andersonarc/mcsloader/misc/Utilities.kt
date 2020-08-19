@@ -1,4 +1,4 @@
-package com.github.andersonarc.mcplassistant.misc
+package com.github.andersonarc.mcsloader.misc
 
 import java.io.File
 import java.util.concurrent.ExecutorService
@@ -21,6 +21,14 @@ fun process(directory: File, vararg options: String): Process {
 }
 
 class Arguments(val directory: String, val repository: String, val mode: Mode, val executor: ExecutorService)
+
+fun String.startsWith(vararg prefixes: String): Boolean {
+    for (prefix in prefixes) {
+        if (prefix.length > length) return false
+        if (substring(0, prefix.length) == prefix) return true
+    }
+    return false
+}
 
 @Suppress("NOTHING_TO_INLINE")
 enum class Mode {

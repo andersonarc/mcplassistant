@@ -1,9 +1,9 @@
-package com.github.andersonarc.mcplassistant.git
+package com.github.andersonarc.mcsloader.git
 
 import java.io.File
 
 fun commits(source: File): List<Pair<String, String>> {
-    com.github.andersonarc.mcplassistant.misc.assert(
+    com.github.andersonarc.mcsloader.misc.assert(
         source.exists(),
         "source directory \"$source\" must exist"
     )
@@ -21,7 +21,7 @@ fun commits(source: File): List<Pair<String, String>> {
         last = commit
         list.add(Pair(commit, version))
     }
-    return list
+    return list.filter { !it.second.contains('w') /** remove snapshots */ }
 }
 
 fun filter(list: List<Pair<String, String>>): List<Pair<String, String>> {

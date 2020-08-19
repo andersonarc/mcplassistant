@@ -1,13 +1,13 @@
-package com.github.andersonarc.mcplassistant
+package com.github.andersonarc.mcsloader
 
-import com.github.andersonarc.mcplassistant.stage.build
-import com.github.andersonarc.mcplassistant.stage.init
-import com.github.andersonarc.mcplassistant.stage.load
+import com.github.andersonarc.mcsloader.stage.build
+import com.github.andersonarc.mcsloader.stage.init
+import com.github.andersonarc.mcsloader.stage.load
 import kotlin.system.exitProcess
 
 
 fun main(args: Array<String>) {
-     println("mcprotocollib assistant started")
+     println("mcprotocollib builder started")
      val arguments = init(args)
 
      if (arguments.mode.canLoad()) {

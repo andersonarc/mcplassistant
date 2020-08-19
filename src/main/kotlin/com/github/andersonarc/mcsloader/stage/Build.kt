@@ -1,7 +1,7 @@
-package com.github.andersonarc.mcplassistant.stage
+package com.github.andersonarc.mcsloader.stage
 
-import com.github.andersonarc.mcplassistant.maven.compile
-import com.github.andersonarc.mcplassistant.misc.Arguments
+import com.github.andersonarc.mcsloader.maven.compile
+import com.github.andersonarc.mcsloader.misc.Arguments
 import java.nio.file.Files
 import java.nio.file.Paths
 import java.util.concurrent.Future

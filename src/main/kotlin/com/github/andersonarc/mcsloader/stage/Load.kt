@@ -1,10 +1,10 @@
-package com.github.andersonarc.mcplassistant.stage
+package com.github.andersonarc.mcsloader.stage
 
-import com.github.andersonarc.mcplassistant.git.commits
-import com.github.andersonarc.mcplassistant.git.filter
-import com.github.andersonarc.mcplassistant.git.git
-import com.github.andersonarc.mcplassistant.git.version
-import com.github.andersonarc.mcplassistant.misc.Arguments
+import com.github.andersonarc.mcsloader.git.commits
+import com.github.andersonarc.mcsloader.git.filter
+import com.github.andersonarc.mcsloader.git.git
+import com.github.andersonarc.mcsloader.git.version
+import com.github.andersonarc.mcsloader.misc.Arguments
 import java.io.File
 import java.util.concurrent.Future
 import java.util.concurrent.TimeUnit
@@ -18,6 +18,20 @@ fun load(arguments: Arguments) {
     val directory = arguments.directory
     val repository = arguments.repository
     val executor = arguments.executor
+
+    /**
+     * clear working directory
+     */
+    val file = File(directory)
+    if (file.exists()) {
+        if (file.isDirectory) {
+            file.deleteRecursively()
+        } else {
+            file.delete()
+        }
+    }
+    file.mkdirs()
+    println("cleaned $directory")
 
     /**
      * last version cloned from github and copied as source to other versions
