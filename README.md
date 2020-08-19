@@ -3,8 +3,7 @@ Build system for loading all MCProtocolLib versions.
 
 ## Purpose
 
-MCSLoader downloads all versions from MCProtocolLib repository and compiles them to .jar files, 
-which are used by MCSCore as a MCProtocol implementation.
+MCSLoader downloads all versions from MCProtocolLib repository and compiles them to .jar files, which are used by MCSCore as a MCProtocol implementation.
 
 ## Usage
 
